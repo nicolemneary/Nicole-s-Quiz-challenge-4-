@@ -17,33 +17,33 @@ let countdown;
 const quizArray = [
     {
         id: "0",
-        question: "How many continents are there in the world?",
-        options: ["7","5","6","9"],
-        correct: "7"
+        question: "What is the name for short sections of code written to complete a task?",
+        options: ["array","loop","function","buffer"],
+        correct: "function"
     },
     {
         id: "1",
-        question: "How many days are there in a week?",
-        options: ["9","7","8","4"],
-        correct: "7"
+        question: "What does 'js' stand for?",
+        options: ["joint service","java script","jester slave","jelly sandwich"],
+        correct: "java script"
     },
 
     {
         id: "2",
-        question: "How many hours are there in a day?",
-        options: ["27","23","24","25"],
-        correct: "24"
+        question: "What is used for styling web pages?",
+        options: ["cfs","ccs","ssc","css"],
+        correct: "css"
     },
     {
         id: "3",
-        question: "How many days are there in a year?",
+        question: "What do you use to listen for an event",
         options: [
-            "365",
-            "366",
-            "367",
-            "368",
+            "Event Listener",
+            "Class Listener",
+            "Event Handler",
+            "Class Handler",
         ],
-        correct: "365"
+        correct: "Event Listener"
     },
 ];
 
