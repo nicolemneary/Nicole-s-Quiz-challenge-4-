@@ -31,7 +31,7 @@
 
 ## Landing Page 
 
-![Image] (assests/landingpage.png)
+<img src="assets/landingpage.png">
 
 ## Technologies
 - HTML
@@ -40,7 +40,7 @@
 
 ## Deployment
 
-- Deployment Link :https://github.com/nicolemneary/nicole-s-quiz-challenge-4.git
+- Deployment Link : https://nicolemneary.github.io/Nicole-s-Quiz-challenge-4-/
 
 
 ## Summary
