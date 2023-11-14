@@ -10,8 +10,8 @@ let startScreen = document.querySelector(".start-screen");
 let startButton = document.getElementById("start-button");
 let questionCount;
 let scoreCount = 0;
-count = 4;
 let countdown;
+
 
 // 4 questions with options and a correct answer
 const quizArray = [
@@ -66,13 +66,11 @@ nextBtn.addEventListener("click", (displayNext = () => {
         countOfQuestions.innerHTML = questionCount + 1 + "of" + quizArray.length + "Question";
 
         quizDisplay(questionCount);
-        count = 4;
         clearInterval(countdown);
         timerDisplay();
     }
 })
 );
-
 const timerDisplay = () => {
     countdown = setInterval(() => {
         count--;
@@ -137,6 +135,7 @@ function checker(userOption) {
     }
     else {
         userOption.classList.add("incorrect");
+        count -= 10;
 
         options.forEach((element) => {
             if ((element.innerText = quizArray[questionCount].correct)) {
@@ -156,7 +155,7 @@ function initial() {
     questionCount = 0;
     scoreCount = 0;
     scoreCount = 0;
-    count = 11;
+    count = 60;
     clearInterval(countdown);
     timerDisplay();
     quizCreater();
@@ -175,4 +174,19 @@ window.onload = () => {
     startScreen.classList.remove("hide");
     displayContainer.classList.add("hide");
 };
+
+function highScore() {
+    let initials = document.getElementById("initials").value;
+    let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    let score = {
+        score: scoreCount,
+        initials: initials,
+    };
+    highScores.push(score);
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+  
+}
+
+document.getElementById("submit").addEventListener("click", highScore);
+
 
